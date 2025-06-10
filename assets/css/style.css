@@ -506,20 +506,46 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-@keyframes typewriter-multiline {
+@keyframes typewriter {
   from {
-    max-height: 0;
+    width: 0;
   }
   to {
-    max-height: 500px; /* adjust as needed */
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
   }
 }
 
 .about-text p {
   overflow: hidden;
-  border-right: none;
-  white-space: normal;
-  animation: typewriter-multiline 2s ease-out;
+  white-space: nowrap;
+  border-right: 2px solid var(--light-gray);
+  width: fit-content;
+  animation: typewriter 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation-fill-mode: both;
+  display: inline-block;
+}
+
+/* Staggered delay */
+.about-text p:nth-of-type(1) {
+  animation-delay: 0s, 0s;
+}
+
+.about-text p:nth-of-type(2) {
+  animation-delay: 4.2s, 4.2s;
+}
+
+.about-text p:nth-of-type(3) {
+  animation-delay: 8.4s, 8.4s;
+}
+
+.about-text p:nth-of-type(4) {
+  animation-delay: 12.6s, 12.6s;
 }
 
 
