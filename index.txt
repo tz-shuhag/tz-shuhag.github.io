@@ -126,6 +126,10 @@ alt = HD.264
 HD.264
 Extension
 
+alt = Dark Mode
+Dark Mode
+Extension
+
 alt = YTFocus
 YTFocus
 Applications
