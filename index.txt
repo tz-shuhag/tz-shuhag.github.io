@@ -138,6 +138,10 @@ alt = YT-HD
 YT-HD
 Extension
 
+alt = Hide Shorts
+Hide Shorts
+Applications
+
 
 
 # contact
