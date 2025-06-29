@@ -142,6 +142,10 @@ alt = Hide Shorts
 Hide Shorts
 Applications
 
+alt = SimpTab
+SimpTab
+Extension
+
 
 
 # contact
