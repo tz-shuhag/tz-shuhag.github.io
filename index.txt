@@ -130,6 +130,10 @@ alt = Dark Mode
 Dark Mode
 Extension
 
+alt = Coverpage
+Coverpage
+Applications
+
 alt = YTFocus
 YTFocus
 Applications
