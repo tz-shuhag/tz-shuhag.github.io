@@ -150,6 +150,10 @@ alt = SimpTab
 SimpTab
 Extension
 
+alt = Anyflare
+Anyflare
+Applications
+
 
 
 # contact
