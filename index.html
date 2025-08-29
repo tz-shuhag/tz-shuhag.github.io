@@ -783,22 +783,30 @@
     <span>Send Message</span>
   </button>
 </form>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  (function(){
-    emailjs.init("zgyX2PM8y1pPU-4D9");
-  })();
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
 
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    emailjs.sendForm('service_r7g41wt', 'template_u0bxlcc', this)
-      .then(function() {
-          alert('Message sent successfully!');
-          document.getElementById('contactForm').reset();
-      }, function(error) {
-          alert('Failed to send message. Please try again.');
-      });
-  });
+  // Get user input
+  const name = this.fullname.value;
+  const email = this.email.value;
+  const message = this.message.value;
+
+  // Format mailto link
+  const recipient = "tzshuhag@outlook.com"; // put your email here
+  const subject = encodeURIComponent("Contact from Portfolio: " + name);
+  const body = encodeURIComponent(
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n\n" +
+    "Message:\n" + message
+  );
+
+  // Gmail compose link
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+
+  // Open Gmail compose in a new tab
+  window.open(gmailLink, '_blank');
+});
 </script>
 
           </form>
