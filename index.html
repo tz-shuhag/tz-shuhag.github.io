@@ -772,7 +772,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form id="contactForm" class="form" data-form>
+    <form id="contactForm" class="form" data-form>
   <div class="input-wrapper">
     <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
     <input type="email" name="email" class="form-input" placeholder="Email address" required>
@@ -787,24 +787,17 @@
 document.getElementById('contactForm').addEventListener('submit', function(e){
   e.preventDefault();
 
-  // Get user input
-  const name = this.fullname.value;
-  const email = this.email.value;
+  // Get only the message
   const message = this.message.value;
 
-  // Format mailto link
-  const recipient = "tzshuhag18@gmail.com"; // put your email here
-  const subject = encodeURIComponent("Contact from Portfolio: " + name);
-  const body = encodeURIComponent(
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n\n" +
-    "Message:\n" + message
-  );
+  // Format mailto link for Gmail
+  const recipient = "tzshuhag18@gmail.com"; // your email
+  const subject = encodeURIComponent("Contact from Portfolio");
+  const body = encodeURIComponent(message);
 
   // Gmail compose link
   const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
 
-  // Open Gmail compose in a new tab
   window.open(gmailLink, '_blank');
 });
 </script>
